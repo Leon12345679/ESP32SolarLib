@@ -53,7 +53,7 @@ void updateFirmware(AsyncWebServerRequest* request)
 }
 
 
-// Fully erases the watch, WiFi config included
+// Fully erases the device, WiFi config included
 void resetToFactorySettings(AsyncWebServerRequest* request)
 {
     if (SolarWebService::authKeyParamValid(request)) {
