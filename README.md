@@ -12,12 +12,13 @@ A robust and lightweight framework for buidling IOT APIs using the ESP32 chip. <
 </ul>
 
 # Usage Example
-Main .ino file with API configuration
+Let's build a simple API that allows us to access info about the device. <br>
+Here is the Main .ino file with API configuration
 ```c++
 #include "SolarWebService.h"
 #include "WifiConfig.h"
 
-/* Identifiers + Constants /**/
+/* Device Identifiers /**/
 
 const char* authKey = "17iXyGkWGrnmXRi9JW9ygiCUIkCSiOK0"; // Auth Key to pass from the client device
 const char* firmwareVersion = "MyDeviceOS-v-1.0";
@@ -25,7 +26,7 @@ const char* modelName = "Solar IOT Device";
 const char* mdnsDomainName = "SolarIOTDevice1"; // Domain Name (Your API will be hosted on this domain)
 const char* mdnsServiceName = "SolarIOTDevice"; // mDNS Service Type Name
 
-/* SolarWebService Object Pointers /**/
+/* Solar Library Object Pointers /**/
 
 WifiConfig* wifiConfigInstance = nullptr;
 SolarWebService* apiInstance = nullptr;
@@ -38,6 +39,7 @@ void setup()
   apiInstance = new SolarWebService(authKey);
 
   // Declare a new api "/info" path and implement it in a separate .ino file.
+  // This will be our device info endpoint.
   apiInstance->server->on("/info", HTTP_GET, &getDeviceInfo);
   
   apiInstance->startMDNS(mdnsDomainName, mdnsServiceName);
@@ -49,7 +51,8 @@ void loop()
   // put your main code here, to run repeatedly:
 }
 ```
-API Path Implementations .ino file
+Let us now implement the endpoint. <br>
+Here is the API Path Implementations .ino file
 ```c++
 void getDeviceInfo(AsyncWebServerRequest* request)
 {
