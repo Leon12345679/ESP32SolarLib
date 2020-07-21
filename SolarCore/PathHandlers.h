@@ -18,8 +18,6 @@
 #include "SolarOTA.h"
 #include "ErrorHandlers.h"
 
-#include "LibConfig.h"
-
 
 // Base API Path Handlers
 void updateFirmware(AsyncWebServerRequest* request);

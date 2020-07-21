@@ -17,8 +17,6 @@
 #include "SolarOTA.h"
 #include "ErrorHandlers.h"
 
-#include "LibConfig.h"
-
 
 /*
 PATH HANDLERS

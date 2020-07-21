@@ -13,8 +13,6 @@
 #include <HTTPUpdate.h>
 #include <time.h>
 
-#include "LibConfig.h"
-
 
 static const char digiCertHighAssuranceEVRootCA[] PROGMEM = R"EOF(
 -----BEGIN CERTIFICATE-----

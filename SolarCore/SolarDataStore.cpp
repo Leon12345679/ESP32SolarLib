@@ -11,7 +11,6 @@
 
 #include <Preferences.h>
 
-#include "LibConfig.h"
 
 static const char* prefrenceNamespace = "SolarDataStore";
 

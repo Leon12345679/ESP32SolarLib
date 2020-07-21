@@ -14,8 +14,6 @@
 #include <HTTPUpdate.h>
 #include <time.h>
 
-#include "LibConfig.h"
-
 
 class SolarOTA {
 private:

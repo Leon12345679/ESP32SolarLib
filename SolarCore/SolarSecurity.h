@@ -9,14 +9,10 @@
 #define SolarSecurity_h
 
 #include "Arduino.h"
-#include "mbedtls/md.h"
-#include "LibConfig.h"
 
 class SolarSecurity {
 private:
     SolarSecurity() {};
-
-    String hash(String stringToHash);
     
 public:
     static SolarSecurity& sharedInstance() {
@@ -24,8 +20,8 @@ public:
         return shared;
     }
     
-    // Hash of the auth key that is passed from client device
-    String authKeyHash;
+    // auth key passed from client device
+    String authKey;
     
     bool verifyAuthKey(String keyToVerify);
     

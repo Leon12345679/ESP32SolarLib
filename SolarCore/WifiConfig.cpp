@@ -9,11 +9,8 @@
 
 #include "Arduino.h"
 
-
 #include <WiFi.h>
 #include "SolarDataStore.h"
-
-#include "LibConfig.h"
 
 
 static String wifiSSIDKey = "wifiSSID";

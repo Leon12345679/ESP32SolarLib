@@ -12,7 +12,6 @@
 
 #include <Preferences.h>
 
-#include "LibConfig.h"
 
 class SolarDataStore {
 private:

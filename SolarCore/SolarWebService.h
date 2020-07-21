@@ -10,8 +10,6 @@
 #include "SolarSecurity.h"
 #include "PathHandlers.h"
 
-#include "LibConfig.h"
-
 
 class SolarWebService {
  

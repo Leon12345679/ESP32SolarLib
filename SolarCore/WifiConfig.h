@@ -10,11 +10,8 @@
 
 #include "Arduino.h"
 
-
 #include <WiFi.h>
 #include "SolarDataStore.h"
-
-#include "LibConfig.h"
 
 
 class WifiConfig {

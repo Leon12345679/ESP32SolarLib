@@ -9,8 +9,6 @@
 #include "SolarSecurity.h"
 #include "PathHandlers.h"
 
-#include "LibConfig.h"
-
 /*
 SOLAR WEB SERVICE IMPLEMENTATION
 */
