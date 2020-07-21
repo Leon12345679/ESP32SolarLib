@@ -1,5 +1,5 @@
 # ESP32 Solar Lib
-A robust lightweight framework for buidling IOT APIs using the ESP32 chip. <br>
+A robust and lightweight framework for buidling IOT APIs using the ESP32 chip. <br>
 
 # Features 
 <ul>
