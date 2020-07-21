@@ -22,7 +22,7 @@ Main .ino file with API configuration
 const char* authKey = "17iXyGkWGrnmXRi9JW9ygiCUIkCSiOK0"; // Auth Key to pass from the client device
 const char* firmwareVersion = "MyDeviceOS-v-1.0";
 const char* modelName = "Solar IOT Device";
-const char* mdnsDomainName = "SolarIOTDevice1"; // Domain Name (Your API will be hosted on these domain)
+const char* mdnsDomainName = "SolarIOTDevice1"; // Domain Name (Your API will be hosted on this domain)
 const char* mdnsServiceName = "SolarIOTDevice"; // mDNS Service Type Name
 
 /* SolarWebService Object Pointers /**/
