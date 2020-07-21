@@ -15,9 +15,9 @@ SOLAR WEB SERVICE IMPLEMENTATION
 
 static const char* authKeyHashVal;
 
-SolarWebService::SolarWebService(const char* authKeyHash)
+SolarWebService::SolarWebService(const char* authKey)
 {
-    SolarSecurity::sharedInstance().authKeyHash = authKeyHash;
+    SolarSecurity::sharedInstance().authKey = authKey;
 
     server = new AsyncWebServer(80);
     

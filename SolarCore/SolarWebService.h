@@ -14,7 +14,7 @@
 class SolarWebService {
  
 public:
-    SolarWebService(const char*  authKeyHash); // init
+    SolarWebService(const char*  authKey); // init
         
     AsyncWebServer* server; // server ptr for adding new paths
     
