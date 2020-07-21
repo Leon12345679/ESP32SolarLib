@@ -119,7 +119,7 @@ Defined in ErrorHandlers.h <br><br>
 # Security
 <b>Please assess potential threats before using this library.</b> <br>
 OTA updates are done over HTTPS. The API is locked by a client auth key. <br> 
-Smart Config passes WiFi credentials without encryptiion. <br>
+Smart Config passes WiFi credentials without encryption. <br>
 This Library doesn't doesn't support HTTPS out of the box to be lightweight. <br>
 
 # About 
