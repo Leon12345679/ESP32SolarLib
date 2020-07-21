@@ -100,7 +100,7 @@ Params: <br>
 </ul>
 
 Notes: <br> 
-The new firmware host's domain must be signed by the set Root CA (DigiCert High Assurance EV Root CA by default). Defined in OTA.h <br>
+Firmware host must be signed by set Root CA (DigiCert High Assurance EV Root CA by default). Defined in OTA.h <br><br>
 
 <b>/reset</b> <br>
 
