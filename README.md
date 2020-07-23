@@ -4,7 +4,7 @@ A robust and lightweight framework for buidling IoT APIs using the ESP32 chip. <
 # Features 
 <ul>
   <li>Auto Connect to WiFi using Smart Config.</li>
-  <li>Base API with reset, OTA update functionality and error handlers.</li>
+  <li>Base API with reset, OTA update functionality.</li>
   <li>HTTPS OTA updates.</li>
   <li>API is secured using a client authentication key.</li>
   <li>Extremely fast response times.</li>
@@ -77,8 +77,9 @@ void getDeviceInfo(AsyncWebServerRequest* request)
          request->send(response);
          
     } else {
-        // Invalid auth key
-        handleUnauthorizedRequest(request);
+        // Invalid or no Auth Key -> Unauthorized request
+        // handleRequest is defined in HttpResponseHandler.h
+        handleRequest(request, 401);
     }
 }
 ```
@@ -112,12 +113,6 @@ Params: <br>
   <li><b>authkey:</b> Client Auth Key.</li>
 </ul>
 
-# Base Error Handlers
-Defined in ErrorHandlers.h <br><br>
-<b> 200 </b> ```void handleSuccess(AsyncWebServerRequest* request); ```<br>
-<b> 400 </b> ```void handleBadRequest(AsyncWebServerRequest* request); ```<br>
-<b> 401 </b> ```void handleUnauthorizedRequest(AsyncWebServerRequest* request); ```<br>
-<b> 412 </b> ```void handlePreconditionFailed(AsyncWebServerRequest* request); ```<br>
 
 # Security
 <b>Please assess potential threats before using this library.</b> <br>
