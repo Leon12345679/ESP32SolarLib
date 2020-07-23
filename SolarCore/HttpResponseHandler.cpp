@@ -1,5 +1,5 @@
 //
-//  ErrorHandlers.cpp
+//  HttpResponseHandler.cpp
 //  
 //
 //  Created by Leon Vladimirov on 4/8/20.

@@ -1,12 +1,12 @@
 //
-//  ErrorHandlers.h
+//  HttpResponseHandler.h
 //  
 //
 //  Created by Leon Vladimirov on 4/8/20.
 //
 
-#ifndef ErrorHandlers_h
-#define ErrorHandlers_h
+#ifndef HttpResponseHandler_h
+#define HttpResponseHandler_h
 
 #include "Arduino.h"
 
@@ -16,4 +16,4 @@
 
 void handleRequest(AsyncWebServerRequest* request, int statusCode);
 
-#endif /* ErrorHandlers_h */
+#endif /* HttpResponseHandler_h */
