@@ -15,7 +15,7 @@
 #include "SolarSecurity.h"
 #include "SolarWebService.h"
 #include "SolarOTA.h"
-#include "ErrorHandlers.h"
+#include "HttpResponseHandler.h"
 
 
 /*
@@ -34,7 +34,7 @@ void updateFirmware(AsyncWebServerRequest* request)
         if (request->hasParam(firmwareURLParamName)) {
             // Can OTA update
             // Respond with 200 and attempt
-            handleSuccess(request);
+            handleRequest(request, 200);
             
             String firmwareURLParamaVal = request->arg(firmwareURLParamName);
             
@@ -44,16 +44,19 @@ void updateFirmware(AsyncWebServerRequest* request)
 
         } else {
             // URL param not set
-            handleBadRequest(request);
+            // Bad request
+            handleRequest(request, 400);
         }
         
     } else {
-        handleUnauthorizedRequest(request);
+        // Wrong or no Auth Key
+        // Unauthorized request
+        handleRequest(request, 401);
     }
 }
 
 
-// Fully erases the device, WiFi config included
+// Fully erases the watch, WiFi config included
 void resetToFactorySettings(AsyncWebServerRequest* request)
 {
     if (SolarWebService::authKeyParamValid(request)) {
@@ -68,7 +71,8 @@ void resetToFactorySettings(AsyncWebServerRequest* request)
         
     }  else {
         // Wrong or no Auth Key
-        handleUnauthorizedRequest(request);
+        // Unauthorized request
+        handleRequest(request, 401);
     }
   
 }

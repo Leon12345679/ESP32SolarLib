@@ -16,7 +16,7 @@
 #include "SolarSecurity.h"
 #include "SolarWebService.h"
 #include "SolarOTA.h"
-#include "ErrorHandlers.h"
+#include "HttpResponseHandler.h"
 
 
 // Base API Path Handlers

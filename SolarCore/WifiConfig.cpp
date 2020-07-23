@@ -33,7 +33,7 @@ void WifiConfig::smartConfig()
 
     WiFi.beginSmartConfig();
 
-    // Wait for smartConfig to finish
+     // put your setup code here, to run once:
     while (!WiFi.smartConfigDone()) {
         
         delay(1000);
